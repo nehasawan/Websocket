@@ -1,0 +1,47 @@
+Why we using websocket for chat application why dont http?
+-http make connection but not push data. for that you have to use polling and long polling.
+- we will keep polling.
+
+why not socket.io?
+-its harder to support multiple platforms
+
+node.js support to talk with use of axios and fetch library.
+
+steps: 
+1. install typescript
+2. connect
+3. event handler
+4. download postman
+5. how it works
+
+browser and node.js supports websocket natively
+
+start coding:
+Q. create web socket server where client and server will talk to each other
+1. isntall packages:
+npm init y
+npx tsc init --y
+npm install typescript
+npx tsc --init
+ - it will create typescript.json 
+ -change rootdir: ./src
+ -change outdir: ./dist
+ (dont forget to uncomment.)
+
+2.create folders src and create file inside it i.e index.ts
+3. change in package.json
+ "scripts": {
+    "dev": "tsc -b && node ./dist/index.js"
+  },
+
+now your all ts file will save in src foolder and js file will save in dist folder.
+4.insta ws library npm install ws @types/ws
+
+enter all code.
+open postman (client)
+
+server to client
+postman -> websocket -> url:ws://localhost:8080 -> send
+
+client to server
+postman -> connect url -> type message-> send it. -> it will print on vs code.
